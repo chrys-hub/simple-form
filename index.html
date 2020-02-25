@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="tree.png" />
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <script src="form.js"></script>
+    <title>Homepage DATA ENTRY</title>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="#">Simple Form With Validator and Print Feature</a>
+        
+
+    </div>
+    <!--MODAL DATA DIRI START -->
+    <button id="myBtn">OPEN MY BIODATA</button>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>MY BIODATA</h1>
+            <center>
+                <div class="card">
+                    <img src="boris.jpg" alt="Avatar" style="width:50%;">
+                    <div class="container">
+                        <h4><b>Chrysna ardy putra pratama</b></h4>
+                        <p>NRP:2103191115</p>
+                        <p>GitHub:<a href="https://github.com/chrysnaardy123/"
+                                target="blank">https://github.com/chrysnaardy123/</a></p>
+                        <p>MyProject:<ol>
+                                <li><a href="https://catsy-image-finder.netlify.com/">image Finder Using Pixabay Api and
+                                        React js</a></li>
+                                <li><a href="https://ghotsy-novel.netlify.com/">Ghotsy novel Web using GatsbyJs react
+                                        based Framework</a></li>
+                            </ol>
+                            <p>Please For The Honorable Lecturer,i'll be happy if you sir can give a comment and some
+                                tips for my GitHub Project</p>
+                        </p>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+    </div>
+    <!--MODAL END-->
+    <div class="wrap">
+        <form id="validationform">
+            <h1 class="center">FORM</h1>
+            <p><b>This is my fully Function Form,If you fill the blank input it will be printed under this form called
+                    "Printed Form" Please Try it</b></p>
+            <ol>
+                <li>
+                    <p>Nama: <input type="input" name="nama" id="myname" placeholder="Nama anda" required></input><span>
+                            *Important</span></p>
+                </li>
+                <li>
+                    <p>NRP : <input type="input" name="nrp" id="mynrp" placeholder="NRP anda" required></input></p>
+                </li>
+                <li>
+                    <p>Kelas : <input type="input" name="kelas" id="mykelas" placeholder="Kelas anda" required></input>
+                    </p>
+                </li>
+                <li>
+                    <p>Jenis Kelamin : <input type="radio" name="kelamin" value="Laki-Laki" required>Laki-Laki</input>
+                        <input type="radio" name="kelamin" value="perempuan" required>Perempuan</input>
+                    </p>
+                </li>
+                <li>
+                    <p>Agama : <select id="agama" required>
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                        </select>
+                    </p>
+                </li>
+                <li>
+                    <p>Tempat/Tanggal Lahir : <input type="input" id="Tgl" placeholder="Tempat tanggal lahir"
+                            required></input>
+                    </p>
+                </li>
+                <li>
+                    Alamat :
+                    <ol>
+                        <textarea cols="40" rows="3" id="alamat" placeholder="Alamat Anda lengkap" required></textarea>
+                    </ol>
+                </li>
+                <li>
+                    <p>Riwayat Pendidikan :</p>
+                    <ol type="a">
+                        <li>
+                            <p>SD &nbsp&nbsp&nbsp: <input type="input" id="sd" placeholder="Sekolah Dasar" required />
+                            </p>
+                        </li>
+                        <li>
+                            <p>SMP : <input type="input" id="smp" placeholder="Sekolah Menengah pertama" required />
+                            </p>
+                        </li>
+                        <li>
+                            <p>SMK: <input type="input" id="smk" placeholder="Sekolah Menengah kejuruan" required />
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p>Email : <input type="input" id="mail" placeholder="Email anda" required></input></p>
+                </li>
+                <li>
+                    <p>Homepage : <input type="input" id="homepage" placeholder="Homepage anda" required></input></p>
+                </li>
+                <li>
+                    Hobby :
+                    <ol>
+                        <textarea cols="40" rows="3" id="hobby" placeholder="Hobby anda" required></textarea>
+                    </ol>
+                </li>
+                <li>
+                    Interest:
+                    <div id="formcheckbox">
+                        <input type="checkbox" value="komputer">Komputer</input>
+                        <input type="checkbox" value="sport">Sport</input>
+                        <input type="checkbox" value="travel">Travelling</input>
+                        <input type="checkbox" value="writing">Writing</input>
+                        <input type="checkbox" value="reading">Reading</input>
+                    </div>
+                </li>
+            </ol>
+            <div>
+                <button type="submit" value="submit" onclick="myalert()">Submit</button>
+                <div class="spacer"></div>
+                <button type="reset" onclick="resetalert();">Reset</button>
+            </div>
+        </form>
+    </div>
+    <!--Cetak Form-->
+    <div id="printform">
+        <div id="wrap2">
+            <h1 class="center">YOUR PRINTED FORM</h1>
+            <ol>
+                <li>
+                    <h4 id="printednama"></h4>
+                </li>
+                <li>
+                    <h4 id="printednrp"></h4>
+                </li>
+                <li>
+                    <h4 id="printedkelas"></h4>
+                </li>
+                <li>
+                    <h4 id="printedkelamin"></h4>
+                </li>
+                <li>
+                    <h4 id="printedagama"></h4>
+                </li>
+                <li>
+                    <h4 id="printedlahir"></h4>
+                </li>
+                <li>
+                    <h4 id="printedalamat"></h4>
+                </li>
+                <li>
+                    <h4>Riwayat Pendidikan:</h4>
+                    <ol>
+                        <li>
+                            <h4 id="printedsd"></h4>
+                        </li>
+                        <li>
+                            <h4 id="printedsmp"></h4>
+                        </li>
+                        <li>
+                            <h4 id="printedsmk"></h4>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4 id="printedmail"></h4>
+                </li>
+                <li>
+                    <h4 id="printedhomepage"></h4>
+                </li>
+                <li>
+                    <h4 id="printedhobby"></h4>
+                </li>
+                <li>
+                    <h4 id="printedinterest"></h4>
+                </li>
+            </ol>
+        </div>
+        <footer>
+            <div class="footer">
+                <p>@Copyright Chrysna ardy putra pratama <span id="date"></span>
+                    <p>NRP:2103191115</p>
+                </p>
+            </div>
+    </div>
+    </footer>
+    <!--Modal Working supaya bisa mengganti class-->
+    <script src="form.js"></script>
+</body>
+
+</html>
